@@ -1,8 +1,7 @@
-export function countBy(x: number, n: number): number[] {
+export function binaryArrayToNumber(arr: number[]): number {
 
-    for (let i = x; i < 10; i += n) {
-        return [i]
-    }
-
-}
-console.log(countBy(1, 10))
+    const invite = arr.join("")
+    const result = parseInt(invite, 2)
+    return result
+};
+console.log(binaryArrayToNumber([1, 1, 1, 1]))
