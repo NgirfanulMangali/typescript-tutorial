@@ -1,8 +1,13 @@
-export function accum(s: string): string {
-    const chars = s.split("");
-    const mapped = chars.map((char, index) => {
-        return char.toLocaleUpperCase() + char.toLocaleLowerCase().repeat(index);
+export function findAverage(array: number[]): number {
+    if (array.length === 0) {
+        return 0;
+    }
+    const total = array.reduce((acc, current) => {
+        return acc + current;
     })
-    return mapped.join("-");
+    const average = total / array.length;
+
+    return average;
 }
-console.log(accum("abcd"))
+
+console.log(findAverage([1, 2, 3]))
