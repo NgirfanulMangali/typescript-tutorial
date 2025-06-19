@@ -1,6 +1,8 @@
-export function uniqueInOrder(iterable: string | (string | number)[]): (string | number)[] {
-    const s = new Set(iterable);
-    const arr = [...s];
-    return arr
-};
-console.log(uniqueInOrder('AAAABBBCCDAABBB'))
+export function accum(s: string): string {
+    const chars = s.split("");
+    const mapped = chars.map((char, index) => {
+        return char.toLocaleUpperCase() + char.toLocaleLowerCase().repeat(index);
+    })
+    return mapped.join("-");
+}
+console.log(accum("abcd"))
