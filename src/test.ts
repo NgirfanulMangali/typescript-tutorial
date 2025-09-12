@@ -1,5 +1,5 @@
-function animal(obj) {
-  return (`This ${obj.color} ${obj.name} has ${obj.legs} legs.`);
+function saleHotdogs(n){
+  return n < 5 ? n * 100 : n < 10 ? n * 95 : n * 90;
 }
+console.log(saleHotdogs(10))
 
-console.log(animal({ color: "white", name: "dog", legs: 4}))
