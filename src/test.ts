@@ -1,16 +1,18 @@
-function padIt(str, n) {
-  var num = 0;
-  do {
-    if (num % 2 === 0) {
-      // kalau genap → taruh di kiri
-      str = "*" + str;
+function grabDoll(dolls){
+  var bag=[];
+  
+  for ( var i=0; i <dolls.length ; i++) {
+    if (dolls[i] === "Hello Kitty" || dolls[i] === "Barbie doll") {
+      bag.push(dolls[i])
     } else {
-      // kalau ganjil → taruh di kanan
-      str = str + "*";
+      continue;
     }
-    num++;
-  } while (num < n)
-  return str;
+    if (bag.length === 3) {
+      break
+    }
+  }
+  
+  return bag;
 }
 
-console.log(padIt("a", 5)); // ***a**
+console.log(grabDoll(["Mickey Mouse", "Hello Kitty", "Snow white"]))
