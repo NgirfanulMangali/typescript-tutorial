@@ -1,13 +1,15 @@
-export function findAverage(array: number[]): number {
-    if (array.length === 0) {
-        return 0;
-    }
-    const total = array.reduce((acc, current) => {
-        return acc + current;
-    })
-    const average = total / array.length;
+function pickIt(arr) {
+    let odd = [], even = [];
 
-    return average;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            even.push(arr[i]);
+        } else {
+            odd.push(arr[i]);
+        }
+    }
+
+    return [odd, even];
 }
 
-console.log(findAverage([1, 2, 3]))
+console.log(pickIt([1, 2])); // [[1], [2]]
