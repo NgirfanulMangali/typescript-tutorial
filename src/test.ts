@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 function grabDoll(dolls){
   var bag=[];
   
@@ -16,11 +17,19 @@ function pickIt(arr) {
         } else {
             odd.push(arr[i]);
         }
+=======
+function giveMeFive(obj) {
+  let arr = []
+  for (let key in obj)
+    if (obj[key].length === 5) {
+      arr.push(obj[key])
+>>>>>>> 6b6bcc7 (Training JS #12: loop statement --for..in and for..of)
     }
+  return arr
 
-    return [odd, even];
 }
 
+<<<<<<< HEAD
 console.log(pickIt([1, 2])); // [[1], [2]]
 =======
 function padIt(str, n) {
@@ -47,3 +56,8 @@ console.log(grabDoll(["Mickey Mouse", "Hello Kitty", "Snow white"]))
 console.log(padIt("a", 5)); // ***a**
 >>>>>>> c0ff376138608ac53eb11c2a3a5971c96c3daefa
 >>>>>>> 72472875c8471475da2bc6820f306d9bdcf0146d
+=======
+var data = { Our: "earth", is: "a", beautyful: "world" }
+console.log("values of arr:")
+console.log(giveMeFive(data))
+>>>>>>> 6b6bcc7 (Training JS #12: loop statement --for..in and for..of)
